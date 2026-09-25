@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arunpratap Singh — Recruitment Leader | 360° IT Recruitment</title>
+<meta name="description" content="Arunpratap Singh — Recruitment Leader with 9+ years of 360° IT recruitment across the UK, Europe, US, India and GCC. Built a team from 1 to 15+ and contributed to £1.2M+ annual team revenue." />
+<meta property="og:title" content="Arunpratap Singh — Recruitment Leader" />
+<meta property="og:description" content="9+ years of 360° IT recruitment. Team built from 1 to 15+. £1.2M+ annual team revenue." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#070B18" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%237C8CFF'/><stop offset='1' stop-color='%232DD4BF'/></linearGradient></defs><rect width='64' height='64' rx='16' fill='url(%23g)'/><text x='50%' y='56%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23070B18'>AS</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#070B18;
+    --bg-2:#0B1124;
+    --panel:rgba(20,28,58,.55);
+    --panel-solid:#101833;
+    --line:rgba(148,163,255,.14);
+    --line-strong:rgba(148,163,255,.28);
+    --text:#E8ECFF;
+    --muted:#98A3C7;
+    --a1:#7C8CFF;
+    --a2:#2DD4BF;
+    --gold:#F2B84B;
+    --grad:linear-gradient(100deg,var(--a1) 0%,#9D7CFF 35%,var(--a2) 100%);
+    --radius-lg:28px;
+    --radius:18px;
+    --radius-sm:12px;
+    --display:"Bricolage Grotesque",system-ui,sans-serif;
+    --body:"Instrument Sans",system-ui,sans-serif;
+    --max:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:90px}
+  body{
+    font-family:var(--body);background:var(--bg);color:var(--text);
+    line-height:1.6;font-size:17px;overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img,svg,canvas{display:block}
+  ::selection{background:rgba(124,140,255,.35)}
+  :focus-visible{outline:2px solid var(--a2);outline-offset:3px;border-radius:8px}
+  .wrap{width:min(var(--max),100% - 48px);margin-inline:auto}
+
+  /* ---------- ambient background ---------- */
+  .ambient{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+  .ambient .orb{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;animation:drift 22s ease-in-out infinite alternate}
+  .orb.o1{width:620px;height:620px;background:#3B45B8;top:-220px;left:-160px}
+  .orb.o2{width:520px;height:520px;background:#0F766E;top:30%;right:-200px;animation-delay:-6s}
+  .orb.o3{width:460px;height:460px;background:#5B3FB0;bottom:-220px;left:30%;animation-delay:-12s;opacity:.3}
+  @keyframes drift{to{transform:translate3d(80px,60px,0) scale(1.12)}}
+  .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+  .spot{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:-1;
+    background:radial-gradient(circle,rgba(124,140,255,.12),transparent 65%);
+    transform:translate(-50%,-50%);left:var(--mx,50%);top:var(--my,30%);transition:opacity .4s}
+
+  /* ---------- progress + nav ---------- */
+  .progress{position:fixed;top:0;left:0;height:3px;width:100%;z-index:60;background:var(--grad);transform-origin:0 50%;transform:scaleX(0)}
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
+  header.nav.scrolled{background:rgba(7,11,24,.72);backdrop-filter:blur(16px) saturate(140%);border-color:var(--line)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:var(--display);font-weight:700;font-size:1.08rem;letter-spacing:-.01em}
+  .mono{width:38px;height:38px;border-radius:11px;background:var(--grad);display:grid;place-items:center;color:var(--bg);font-weight:800;font-size:.95rem}
+  .nav-links{display:flex;gap:6px;align-items:center}
+  .nav-links a{padding:8px 14px;border-radius:999px;color:var(--muted);font-size:.95rem;font-weight:500;transition:color .2s,background .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--text);background:rgba(124,140,255,.1)}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:.97rem;border:1px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,border-color .25s;font-family:var(--body);will-change:transform}
+  .btn-primary{background:var(--grad);color:#08102A;box-shadow:0 10px 30px -10px rgba(124,140,255,.7)}
+  .btn-primary:hover{box-shadow:0 16px 40px -10px rgba(45,212,191,.6)}
+  .btn-ghost{border-color:var(--line-strong);color:var(--text);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--a1);background:rgba(124,140,255,.08)}
+  .btn svg{width:18px;height:18px}
+  .menu-btn{display:none;background:none;border:1px solid var(--line-strong);color:var(--text);width:44px;height:44px;border-radius:12px;cursor:pointer}
+  .menu-btn span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;border-radius:2px;transition:transform .3s,opacity .3s}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100vh;padding:130px 0 70px;display:flex;align-items:center}
+  #net{position:absolute;inset:0;width:100%;height:100%;z-index:0;opacity:.75;
+    -webkit-mask-image:radial-gradient(ellipse 80% 70% at 60% 45%,#000 30%,transparent 80%);
+            mask-image:radial-gradient(ellipse 80% 70% at 60% 45%,#000 30%,transparent 80%)}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.35fr .9fr;gap:56px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:999px;border:1px solid var(--line-strong);background:rgba(45,212,191,.06);font-size:.9rem;color:#BFF5EC;margin-bottom:26px}
+  .pulse{width:9px;height:9px;border-radius:50%;background:var(--a2);box-shadow:0 0 0 0 rgba(45,212,191,.7);animation:pulse 2s infinite}
+  @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(45,212,191,0)}100%{box-shadow:0 0 0 0 rgba(45,212,191,0)}}
+  h1{font-family:var(--display);font-weight:800;font-size:clamp(2.4rem,5.2vw,4.3rem);line-height:1.02;letter-spacing:-.035em;margin-bottom:22px}
+  .grad{background:var(--grad);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+  @keyframes shine{to{background-position:200% center}}
+  h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.06em}
+  h1 .w > span{display:inline-block;transform:translateY(110%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+  .loaded h1 .w > span{transform:none}
+  .type-line{font-family:var(--display);font-size:clamp(1.05rem,1.8vw,1.3rem);color:var(--text);font-weight:600;min-height:3.2em;margin-bottom:12px;line-height:1.5}
+  .type-line .pre{color:var(--muted);font-weight:500;margin-right:.35em}
+  .caret{vertical-align:-.2em}
+  .caret{display:inline-block;width:2px;height:1.2em;background:var(--a2);animation:blink 1s steps(1) infinite;margin-left:2px}
+  @keyframes blink{50%{opacity:0}}
+  .lead{color:var(--muted);font-size:1.08rem;max-width:60ch;margin-bottom:32px}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:52px}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);backdrop-filter:blur(10px);overflow:hidden}
+  .stat{padding:20px 20px 18px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  .stat b{display:block;font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .stat span{color:var(--muted);font-size:.86rem}
+
+  .focus-card{position:relative;border-radius:var(--radius-lg);padding:30px;background:linear-gradient(160deg,rgba(28,38,80,.8),rgba(12,18,40,.85));border:1px solid var(--line-strong);backdrop-filter:blur(14px);box-shadow:0 40px 80px -30px rgba(0,0,0,.7);transform-style:preserve-3d;transition:transform .2s ease-out}
+  .focus-card::before{content:"";position:absolute;inset:-1px;border-radius:inherit;padding:1px;background:conic-gradient(from var(--ang,0deg),transparent 0 60%,var(--a1),var(--a2),transparent 90%);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;animation:spin 6s linear infinite;pointer-events:none}
+  @property --ang{syntax:"<angle>";inherits:false;initial-value:0deg}
+  @keyframes spin{to{--ang:360deg}}
+  .profile{display:flex;align-items:center;gap:16px;margin-bottom:24px}
+  .avatar{position:relative;width:72px;height:72px;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:1.5rem;background:var(--panel-solid);flex-shrink:0}
+  .avatar::after{content:"";position:absolute;inset:-4px;border-radius:50%;background:var(--grad);z-index:-1}
+  .avatar-wrap{position:relative;isolation:isolate}
+  .profile h3{font-family:var(--display);font-size:1.25rem;line-height:1.2}
+  .profile p{color:var(--muted);font-size:.9rem}
+  .focus-card h4{font-size:.85rem;color:var(--a2);font-weight:600;margin-bottom:12px}
+  .kv{display:grid;grid-template-columns:auto 1fr;gap:12px 18px;font-size:.94rem}
+  .kv dt{color:var(--muted)}
+  .kv dd{text-align:right;font-weight:500}
+  .mini-bars{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:grid;gap:12px}
+  .bar-row{display:grid;grid-template-columns:90px 1fr 54px;gap:12px;align-items:center;font-size:.85rem;color:var(--muted)}
+  .bar{height:6px;border-radius:6px;background:rgba(255,255,255,.07);overflow:hidden}
+  .bar i{display:block;height:100%;width:0;background:var(--grad);border-radius:inherit;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+  .bar-row em{font-style:normal;color:var(--text);text-align:right;font-weight:600}
+  .scroll-cue{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:1;width:26px;height:42px;border:2px solid var(--line-strong);border-radius:14px}
+  .scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:var(--a2);animation:cue 1.8s infinite}
+  @keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+
+  /* ---------- marquee ---------- */
+  .marquee{border-block:1px solid var(--line);padding:22px 0;overflow:hidden;background:rgba(11,17,36,.5);
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+  .track{display:flex;gap:56px;width:max-content;animation:marq 38s linear infinite}
+  .marquee:hover .track{animation-play-state:paused}
+  .track span{font-family:var(--display);font-size:1.35rem;font-weight:600;color:#C5CCEA;white-space:nowrap;display:flex;align-items:center;gap:56px}
+  .track span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--grad)}
+  @keyframes marq{to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section.block{padding:120px 0}
+  .sec-head{max-width:760px;margin-bottom:56px}
+  .kicker{display:inline-block;color:var(--a2);font-weight:600;font-size:.95rem;margin-bottom:12px}
+  h2{font-family:var(--display);font-weight:700;font-size:clamp(2rem,4vw,3.1rem);line-height:1.08;letter-spacing:-.03em;margin-bottom:16px}
+  .sec-head p{color:var(--muted);font-size:1.06rem;max-width:62ch}
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.2,.8,.2,1),transform .9s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.08s}.reveal[data-d="2"]{transition-delay:.16s}.reveal[data-d="3"]{transition-delay:.24s}.reveal[data-d="4"]{transition-delay:.32s}.reveal[data-d="5"]{transition-delay:.4s}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:start}
+  .about-copy p{color:#C9D0EE;margin-bottom:18px;max-width:64ch}
+  .about-copy strong{color:var(--text)}
+  .facts{border:1px solid var(--line);border-radius:var(--radius-lg);background:var(--panel);backdrop-filter:blur(10px);padding:8px 26px}
+  .fact{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:.95rem}
+  .fact:last-child{border-bottom:0}
+  .fact dt{color:var(--muted)}
+  .fact a{color:var(--a2)}
+  .fact a:hover{text-decoration:underline}
+
+  /* impact */
+  .impact{background:linear-gradient(180deg,transparent,rgba(16,24,51,.6) 20%,rgba(16,24,51,.6) 80%,transparent)}
+  .impact-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .imp{position:relative;border-radius:var(--radius-lg);border:1px solid var(--line);background:var(--panel);padding:30px;overflow:hidden;transition:border-color .3s,transform .3s}
+  .imp:hover{border-color:var(--line-strong);transform:translateY(-4px)}
+  .imp::after{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--x,50%) var(--y,50%),rgba(124,140,255,.14),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+  .imp:hover::after{opacity:1}
+  .imp.big{grid-column:span 7;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+  .imp.tall{grid-column:span 5}
+  .imp.third{grid-column:span 4}
+  .imp .num{font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,5vw,4.2rem);letter-spacing:-.04em;line-height:1}
+  .imp .num.gold{color:var(--gold)}
+  .imp h3{font-family:var(--display);font-size:1.2rem;margin:10px 0 8px}
+  .imp p{color:var(--muted);font-size:.96rem}
+  .growth{display:flex;align-items:flex-end;gap:10px;height:120px;margin-top:22px}
+  .growth i{flex:1;border-radius:8px 8px 3px 3px;background:var(--grad);opacity:.85;height:0;transition:height 1.2s cubic-bezier(.2,.8,.2,1)}
+  .quarters{display:flex;gap:8px;margin-top:20px}
+  .quarters span{flex:1;padding:10px 0;text-align:center;border-radius:10px;border:1px solid rgba(242,184,75,.35);color:var(--gold);font-weight:600;font-size:.82rem;background:rgba(242,184,75,.06);opacity:0;transform:scale(.8);transition:opacity .5s,transform .5s}
+  .in .quarters span{opacity:1;transform:none}
+
+  /* expertise */
+  .exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{position:relative;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel);padding:28px;transition:border-color .3s,transform .35s cubic-bezier(.2,.8,.2,1),background .3s;overflow:hidden}
+  .card:hover{border-color:rgba(124,140,255,.45);transform:translateY(-6px);background:rgba(24,34,70,.7)}
+  .card::before{content:"";position:absolute;left:0;top:0;height:2px;width:100%;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+  .card:hover::before{transform:scaleX(1)}
+  .ico{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(124,140,255,.12);border:1px solid var(--line-strong);margin-bottom:18px;color:var(--a1)}
+  .ico svg{width:24px;height:24px}
+  .card h3{font-family:var(--display);font-size:1.2rem;margin-bottom:14px;letter-spacing:-.01em}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:.84rem;padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:#C9D0EE;background:rgba(255,255,255,.02);transition:border-color .2s,color .2s}
+  .card:hover .chip{border-color:var(--line-strong)}
+
+  /* markets */
+  .mk-wrap{display:grid;grid-template-columns:320px 1fr;gap:28px;align-items:stretch}
+  .mk-tabs{display:flex;flex-direction:column;gap:10px}
+  .mk-tab{text-align:left;padding:20px 22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel);color:var(--text);cursor:pointer;font-family:var(--body);transition:border-color .25s,background .25s;position:relative;overflow:hidden}
+  .mk-tab b{display:block;font-family:var(--display);font-size:1.2rem}
+  .mk-tab small{color:var(--muted);font-size:.86rem}
+  .mk-tab[aria-selected="true"]{border-color:rgba(45,212,191,.5);background:rgba(45,212,191,.07)}
+  .mk-tab[aria-selected="true"]::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;border-radius:3px;background:var(--grad)}
+  .mk-panel{border-radius:var(--radius-lg);border:1px solid var(--line-strong);background:linear-gradient(160deg,rgba(28,38,80,.6),rgba(12,18,40,.7));padding:36px;min-height:320px;position:relative;overflow:hidden}
+  .mk-panel[hidden]{display:none}
+  .mk-panel h3{font-family:var(--display);font-size:1.7rem;letter-spacing:-.02em;margin-bottom:10px}
+  .mk-panel > p{color:var(--muted);margin-bottom:24px;max-width:56ch}
+  .mk-panel .chips .chip{font-size:.92rem;padding:9px 16px;animation:pop .5s both}
+  @keyframes pop{from{opacity:0;transform:translateY(10px) scale(.95)}}
+  .mk-flag{position:absolute;right:-20px;bottom:-40px;font-family:var(--display);font-weight:800;font-size:11rem;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(148,163,255,.14);pointer-events:none;letter-spacing:-.05em}
+
+  /* timeline */
+  .timeline{position:relative;padding-left:44px}
+  .tl-line{position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl-line i{position:absolute;left:0;top:0;width:100%;height:0;background:var(--grad);box-shadow:0 0 18px rgba(124,140,255,.8)}
+  .job{position:relative;margin-bottom:28px}
+  .job::before{content:"";position:absolute;left:-40px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--line-strong);transition:border-color .4s,box-shadow .4s,background .4s}
+  .job.lit::before{border-color:var(--a2);background:var(--a2);box-shadow:0 0 0 6px rgba(45,212,191,.15)}
+  .job-card{border-radius:var(--radius);border:1px solid var(--line);background:var(--panel);padding:28px 30px;transition:border-color .3s}
+  .job-card:hover{border-color:var(--line-strong)}
+  .job-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 20px;align-items:baseline;margin-bottom:6px}
+  .job h3{font-family:var(--display);font-size:1.35rem;letter-spacing:-.015em}
+  .when{font-size:.88rem;color:var(--a2);font-weight:600;white-space:nowrap}
+  .org{color:var(--text);font-weight:600;margin-bottom:4px}
+  .org small{color:var(--muted);font-weight:400;font-size:.9rem}
+  .tag{display:inline-block;font-size:.76rem;padding:3px 10px;border-radius:999px;background:rgba(242,184,75,.12);color:var(--gold);border:1px solid rgba(242,184,75,.3);margin-left:8px;vertical-align:middle;font-weight:600}
+  .job ul{list-style:none;margin-top:16px;display:grid;gap:10px}
+  .job li{position:relative;padding-left:22px;color:#C9D0EE;font-size:.97rem}
+  .job li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:2px;background:var(--grad);transform:rotate(45deg)}
+  .job ul.job-more{display:none;margin-top:10px}
+  .job.open ul.job-more{display:grid;animation:pop .45s both}
+  .toggle{margin-top:14px;background:none;border:0;color:var(--a1);font-weight:600;cursor:pointer;font-family:var(--body);font-size:.92rem;padding:4px 0}
+  .toggle:hover{color:var(--a2)}
+  .early{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:8px}
+  .early .job-card{padding:22px}
+  .early h3{font-size:1.08rem}
+  .early p{color:var(--muted);font-size:.9rem;margin-top:10px}
+
+  /* education + tools */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .edu{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--line)}
+  .edu:last-child{border-bottom:0}
+  .edu .ico{margin:0;flex-shrink:0}
+  .edu h3{font-family:var(--display);font-size:1.1rem;margin:0 0 2px}
+  .edu p{color:var(--muted);font-size:.92rem}
+  .tools{display:flex;flex-wrap:wrap;gap:12px}
+  .tool{padding:14px 20px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.02);font-weight:600;font-family:var(--display);transition:transform .3s,border-color .3s,background .3s}
+  .tool:hover{transform:translateY(-4px) rotate(-1deg);border-color:var(--a1);background:rgba(124,140,255,.08)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px}
+  .c-list{display:grid;gap:14px}
+  .c-item{display:flex;gap:16px;align-items:center;padding:20px 22px;border-radius:var(--radius);border:1px solid var(--line);background:var(--panel);transition:border-color .3s,transform .3s}
+  a.c-item:hover{border-color:rgba(45,212,191,.5);transform:translateX(6px)}
+  .c-item .ico{margin:0;flex-shrink:0;color:var(--a2);background:rgba(45,212,191,.1)}
+  .c-item h3{font-size:.85rem;color:var(--muted);font-weight:500}
+  .c-item p{font-weight:600;word-break:break-word}
+  form.cf{border-radius:var(--radius-lg);border:1px solid var(--line-strong);background:linear-gradient(160deg,rgba(28,38,80,.6),rgba(12,18,40,.75));padding:34px;display:grid;gap:18px}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .field{position:relative}
+  .field input,.field textarea,.field select{width:100%;padding:22px 16px 10px;border-radius:14px;border:1px solid var(--line-strong);background:rgba(7,11,24,.6);color:var(--text);font:inherit;font-size:.98rem;transition:border-color .25s,box-shadow .25s;appearance:none}
+  .field textarea{min-height:140px;resize:vertical}
+  .field label{position:absolute;left:17px;top:16px;color:var(--muted);font-size:.98rem;pointer-events:none;transition:all .2s}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--a1);box-shadow:0 0 0 4px rgba(124,140,255,.15)}
+  .field input:focus + label,.field input:not(:placeholder-shown) + label,
+  .field textarea:focus + label,.field textarea:not(:placeholder-shown) + label,
+  .field select + label{top:7px;font-size:.74rem;color:var(--a2)}
+  .field select{cursor:pointer}
+  .field .chev{position:absolute;right:16px;top:50%;transform:translateY(-50%);pointer-events:none;color:var(--muted)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+  .form-foot{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+  .status{font-size:.92rem;min-height:1.4em}
+  .status.ok{color:var(--a2)}
+  .status.err{color:#FF8FA3}
+  .btn[disabled]{opacity:.6;cursor:progress}
+  .spinner{width:16px;height:16px;border:2px solid rgba(8,16,42,.3);border-top-color:#08102A;border-radius:50%;animation:rot .8s linear infinite;display:none}
+  .sending .spinner{display:inline-block}
+  @keyframes rot{to{transform:rotate(360deg)}}
+
+  footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:.9rem}
+  .foot-in{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+  .to-top{width:44px;height:44px;border-radius:50%;border:1px solid var(--line-strong);display:grid;place-items:center;color:var(--text);transition:border-color .2s,transform .2s}
+  .to-top:hover{border-color:var(--a2);transform:translateY(-3px)}
+
+  /* ---------- responsive ---------- */
+  @media (max-width:1020px){
+    .hero-grid,.about-grid,.contact-grid,.mk-wrap{grid-template-columns:1fr}
+    .exp-grid{grid-template-columns:1fr 1fr}
+    .imp.big,.imp.tall{grid-column:span 12}
+    .imp.third{grid-column:span 6}
+    .early{grid-template-columns:1fr 1fr}
+    .mk-tabs{flex-direction:row;overflow-x:auto;padding-bottom:4px}
+    .mk-tab{min-width:180px}
+  }
+  @media (max-width:820px){
+    .nav-links{position:fixed;inset:74px 0 auto 0;flex-direction:column;align-items:stretch;padding:16px 24px 24px;background:rgba(7,11,24,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transform:translateY(-120%);transition:transform .35s cubic-bezier(.2,.8,.2,1);gap:4px}
+    .nav-links.open{transform:none}
+    .nav-links a{padding:14px 16px}
+    .menu-btn{display:block}
+    .nav-cta{display:none}
+    .stats{grid-template-columns:1fr 1fr}
+    .stat:nth-child(2){border-right:0}
+    .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+    .two,.row2{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    body{font-size:16px}
+    section.block{padding:84px 0}
+    .exp-grid,.early{grid-template-columns:1fr}
+    .imp.third{grid-column:span 12}
+    .timeline{padding-left:32px}
+    .job::before{left:-29px}
+    .tl-line{left:6px}
+    .job-card,form.cf,.mk-panel{padding:24px}
+    .fact{grid-template-columns:1fr;gap:2px}
+    .scroll-cue{display:none}
+    .mk-flag{font-size:7rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+    h1 .w > span{transform:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<div class="ambient" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="spot" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand" aria-label="Arunpratap Singh, back to top"><span class="mono">AS</span>Arunpratap Singh</a>
+    <nav class="nav-links" id="navlinks" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#markets">Markets</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn btn-primary nav-cta magnetic" href="mailto:arunpratap.rv007@gmail.com">Get in touch</a>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="navlinks"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge reveal"><span class="pulse"></span>Open to recruitment leadership conversations</div>
+      <h1 id="headline">Scaling IT recruitment teams from one desk to <span class="grad">fifteen live billers</span></h1>
+      <div class="type-line reveal" data-d="2" aria-live="polite"><span class="pre">Specialist in</span><span id="typed"></span><span class="caret" aria-hidden="true"></span></div>
+      <p class="lead reveal" data-d="3">9+ years of 360° IT recruitment across the UK, Europe, US, India and GCC — combining hands-on delivery with people leadership, commercial ownership and recruiter development for financial services, Big 4 and technology clients.</p>
+      <div class="cta-row reveal" data-d="4">
+        <a href="#contact" class="btn btn-primary magnetic">Start a conversation</a>
+        <a href="Arunpratap_Singh_CV.pdf" download class="btn btn-ghost magnetic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+          Download CV
+        </a>
+      </div>
+      <div class="stats reveal" data-d="5">
+        <div class="stat"><b data-count="9" data-suffix="+">0</b><span>Years in 360° IT recruitment</span></div>
+        <div class="stat"><b data-count="15" data-suffix="+">0</b><span>Team built from 1</span></div>
+        <div class="stat"><b data-count="1.2" data-decimals="1" data-prefix="£" data-suffix="M+">0</b><span>Annual team revenue</span></div>
+        <div class="stat"><b data-count="110" data-suffix="%+">0</b><span>Quarterly target performance</span></div>
+      </div>
+    </div>
+
+    <aside class="focus-card reveal tilt" data-d="3" aria-label="Current focus">
+      <div class="profile">
+        <div class="avatar-wrap"><div class="avatar">AS</div></div>
+        <div><h3>Arunpratap Singh</h3><p>Recruitment Leader</p></div>
+      </div>
+      <h4>Current focus</h4>
+      <dl class="kv">
+        <dt>Role</dt><dd>Technical Lead Recruitment Consultant</dd>
+        <dt>Company</dt><dd>IMS People Possible</dd>
+        <dt>Markets</dt><dd>UK, EU &amp; US</dd>
+        <dt>Team</dt><dd>15+ technical recruiters</dd>
+        <dt>Based in</dt><dd>Ahmedabad, India</dd>
+      </dl>
+      <div class="mini-bars">
+        <div class="bar-row"><span>Targets</span><div class="bar"><i data-w="100"></i></div><em>110%+</em></div>
+        <div class="bar-row"><span>Time-to-fill</span><div class="bar"><i data-w="72"></i></div><em>−22%</em></div>
+        <div class="bar-row"><span>Conversion</span><div class="bar"><i data-w="80"></i></div><em>+30%</em></div>
+      </div>
+    </aside>
+  </div>
+  <a href="#about" class="scroll-cue" aria-label="Scroll to about"></a>
+</section>
+
+<div class="marquee" aria-label="Specialist areas">
+  <div class="track">
+    <span>Data &amp; Analytics</span><span>Cloud &amp; Infrastructure</span><span>Cybersecurity</span><span>Software Engineering</span><span>DevOps / SRE</span><span>Business Analysis</span><span>Programme Management</span><span>RegTech</span>
+    <span aria-hidden="true">Data &amp; Analytics</span><span aria-hidden="true">Cloud &amp; Infrastructure</span><span aria-hidden="true">Cybersecurity</span><span aria-hidden="true">Software Engineering</span><span aria-hidden="true">DevOps / SRE</span><span aria-hidden="true">Business Analysis</span><span aria-hidden="true">Programme Management</span><span aria-hidden="true">RegTech</span>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section class="block" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">About</span>
+      <h2 class="reveal" data-d="1">A delivery leader who still recruits</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="reveal">Arunpratap is a <strong>results-driven Recruitment Leader</strong> with 9+ years of 360° IT recruitment across the UK, Europe, US, India and GCC markets — spanning contract and permanent hiring for technology, financial services, Big 4 consulting, SaaS and enterprise environments.</p>
+        <p class="reveal" data-d="1">At <strong>IMS People Possible</strong>, he built the recruitment function from a single seat to a team of 15+, turning new joiners into live-billing consultants through sourcing standards, screening frameworks, pipeline reviews and placement-focused coaching.</p>
+        <p class="reveal" data-d="2">He partners with C-suite leaders, Heads of Engineering and Talent Acquisition teams at global financial institutions, Big 4 firms and product organisations — and stays hands-on across the full cycle, from requisition intake to offer negotiation and onboarding.</p>
+        <p class="reveal" data-d="3">Fluent in the contract models that matter to each market: UK Inside and Outside IR35, B2B and Umbrella; US W2, C2C and 1099; EU contract and permanent; and GCC direct-hire and EOR models.</p>
+      </div>
+      <dl class="facts reveal" data-d="2">
+        <div class="fact"><dt>Location</dt><dd>Ahmedabad, Gujarat, India</dd></div>
+        <div class="fact"><dt>Current role</dt><dd>Technical Lead Recruitment Consultant, IMS People Possible (Jan 2025 – Present)</dd></div>
+        <div class="fact"><dt>Markets</dt><dd>UK, Europe, US, India, GCC</dd></div>
+        <div class="fact"><dt>Sectors</dt><dd>Financial services, Big 4 consulting, SaaS, enterprise technology</dd></div>
+        <div class="fact"><dt>Education</dt><dd>B.Sc., Jaipur National University (2022)</dd></div>
+        <div class="fact"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/arunpratap-singh-a26348167" target="_blank" rel="noopener">arunpratap-singh-a26348167</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ================= IMPACT ================= -->
+<section class="block impact" id="impact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">Leadership &amp; commercial impact</span>
+      <h2 class="reveal" data-d="1">Numbers that come from building people</h2>
+      <p class="reveal" data-d="2">Structure, KPIs and coaching routines turned a single recruiter seat into a sustainable, revenue-generating delivery team.</p>
+    </div>
+    <div class="impact-grid">
+      <article class="imp big reveal glow">
+        <div>
+          <div class="num"><span class="grad" data-count="15" data-prefix="1 → " data-suffix="+">1 → 0</span></div>
+          <h3>Team scaled at IMS People Possible</h3>
+          <p>Built the delivery function covering recruitment, performance management, coaching and commercial output — with individual KPIs, SLAs and weekly delivery targets.</p>
+        </div>
+        <div class="growth" aria-hidden="true">
+          <i data-h="8"></i><i data-h="16"></i><i data-h="26"></i><i data-h="38"></i><i data-h="50"></i><i data-h="62"></i><i data-h="76"></i><i data-h="88"></i><i data-h="100"></i>
+        </div>
+      </article>
+      <article class="imp tall reveal glow" data-d="1">
+        <div class="num gold" data-count="1.2" data-decimals="1" data-prefix="£" data-suffix="M+">£0</div>
+        <h3>Annual team revenue</h3>
+        <p>Contributed through contract and permanent placements across UK and European markets.</p>
+        <div class="quarters" aria-label="110%+ of target for six consecutive quarters">
+          <span style="transition-delay:.2s">Q1</span><span style="transition-delay:.35s">Q2</span><span style="transition-delay:.5s">Q3</span><span style="transition-delay:.65s">Q4</span><span style="transition-delay:.8s">Q5</span><span style="transition-delay:.95s">Q6</span>
+        </div>
+        <p style="margin-top:12px;font-size:.88rem">110%+ of quarterly billing target, six quarters running.</p>
+      </article>
+      <article class="imp third reveal glow">
+        <div class="num" data-count="243" data-prefix="€" data-suffix="K+">€0</div>
+        <h3>Annual revenue margin</h3>
+        <p>Delivered at Solvex Solutions while leading a team of five — and invited onsite to the London office.</p>
+      </article>
+      <article class="imp third reveal glow" data-d="1">
+        <div class="num" data-count="22" data-prefix="−" data-suffix="%">−0%</div>
+        <h3>Average time-to-fill</h3>
+        <p>Reduced through structured intake briefings, pipeline management and recruiter coaching.</p>
+      </article>
+      <article class="imp third reveal glow" data-d="2">
+        <div class="num" data-count="30" data-prefix="+" data-suffix="%">+0%</div>
+        <h3>Shortlist-to-interview</h3>
+        <p>Conversion improved by developing junior recruiters through candidate review sessions.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERTISE ================= -->
+<section class="block" id="expertise">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">Expertise</span>
+      <h2 class="reveal" data-d="1">A toolkit for technology hiring at scale</h2>
+      <p class="reveal" data-d="2">Leadership, delivery and market knowledge — built across four regions and every major contract model.</p>
+    </div>
+    <div class="exp-grid">
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/><path d="M16 4.2a3.5 3.5 0 0 1 0 6.6M18.5 13.8c1.8.9 3 2.8 3 5"/></svg></div>
+        <h3>Leadership</h3>
+        <div class="chips"><span class="chip">Team building &amp; scaling</span><span class="chip">Recruiter coaching</span><span class="chip">KPI / SLA management</span><span class="chip">Performance management</span><span class="chip">Live-billing development</span></div>
+      </article>
+      <article class="card reveal" data-d="1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
+        <h3>360° Recruitment</h3>
+        <div class="chips"><span class="chip">Contract &amp; permanent</span><span class="chip">Executive / leadership hiring</span><span class="chip">Boolean sourcing</span><span class="chip">Screening</span><span class="chip">Offer negotiation</span></div>
+      </article>
+      <article class="card reveal" data-d="2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></div>
+        <h3>Commercial ownership</h3>
+        <div class="chips"><span class="chip">Revenue ownership</span><span class="chip">Margin growth</span><span class="chip">Salary benchmarking</span><span class="chip">Multi-currency rates</span><span class="chip">Client retention</span></div>
+      </article>
+      <article class="card reveal">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
+        <h3>Technology specialisms</h3>
+        <div class="chips"><span class="chip">Data &amp; Analytics</span><span class="chip">Cloud &amp; Infrastructure</span><span class="chip">Cybersecurity</span><span class="chip">Software Engineering</span><span class="chip">DevOps / SRE</span><span class="chip">IT PMO</span></div>
+      </article>
+      <article class="card reveal" data-d="1">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V10l7-5 7 5v11"/><path d="M9 21v-6h6v6"/></svg></div>
+        <h3>Sector focus</h3>
+        <div class="chips"><span class="chip">Global banks</span><span class="chip">Financial services</span><span class="chip">Big 4 consulting</span><span class="chip">SaaS</span><span class="chip">Enterprise tech</span></div>
+      </article>
+      <article class="card reveal" data-d="2">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 3 7l9 5 9-5-9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></div>
+        <h3>Stakeholder partnership</h3>
+        <div class="chips"><span class="chip">C-suite</span><span class="chip">Heads of Engineering</span><span class="chip">Talent Acquisition</span><span class="chip">PSL management</span><span class="chip">RPO delivery</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARKETS ================= -->
+<section class="block" id="markets">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">Markets &amp; contract models</span>
+      <h2 class="reveal" data-d="1">Four regions, every engagement model</h2>
+      <p class="reveal" data-d="2">Select a market to see the contract and compliance models handled day to day.</p>
+    </div>
+    <div class="mk-wrap reveal" data-d="2">
+      <div class="mk-tabs" role="tablist" aria-label="Markets">
+        <button class="mk-tab" role="tab" aria-selected="true" aria-controls="mk-uk" id="t-uk"><b>United Kingdom</b><small>IR35, PSL &amp; RPO</small></button>
+        <button class="mk-tab" role="tab" aria-selected="false" aria-controls="mk-us" id="t-us" tabindex="-1"><b>United States</b><small>W2, C2C, 1099 &amp; visas</small></button>
+        <button class="mk-tab" role="tab" aria-selected="false" aria-controls="mk-eu" id="t-eu" tabindex="-1"><b>Europe</b><small>DACH, Benelux, Nordics</small></button>
+        <button class="mk-tab" role="tab" aria-selected="false" aria-controls="mk-gcc" id="t-gcc" tabindex="-1"><b>GCC</b><small>Direct hire &amp; EOR</small></button>
+      </div>
+      <div>
+        <div class="mk-panel" role="tabpanel" id="mk-uk" aria-labelledby="t-uk">
+          <h3>United Kingdom</h3>
+          <p>Core market for contract and permanent technology hiring into UK financial institutions, global banks and Big 4 practices — including onsite work at the London office.</p>
+          <div class="chips"><span class="chip">Outside IR35 (Ltd / B2B)</span><span class="chip">Inside IR35 (Umbrella / PAYE)</span><span class="chip">PSL management</span><span class="chip">RPO delivery</span><span class="chip">GBP rate negotiation</span></div>
+          <div class="mk-flag" aria-hidden="true">UK</div>
+        </div>
+        <div class="mk-panel" role="tabpanel" id="mk-us" aria-labelledby="t-us" hidden>
+          <h3>United States</h3>
+          <p>Where the career started — full-cycle IT and financial services recruitment for clients including major US banks and enterprise technology firms.</p>
+          <div class="chips"><span class="chip">W2</span><span class="chip">Corp-to-Corp / C2C</span><span class="chip">1099</span><span class="chip">H1B</span><span class="chip">GC</span><span class="chip">USC</span><span class="chip">TN</span><span class="chip">OPT / CPT</span><span class="chip">Vendor &amp; bench sales</span></div>
+          <div class="mk-flag" aria-hidden="true">US</div>
+        </div>
+        <div class="mk-panel" role="tabpanel" id="mk-eu" aria-labelledby="t-eu" hidden>
+          <h3>Europe</h3>
+          <p>Contract and permanent placements across major European tech hubs, with multi-currency negotiation across EUR and GBP.</p>
+          <div class="chips"><span class="chip">DACH</span><span class="chip">Benelux</span><span class="chip">Nordics</span><span class="chip">EU contract</span><span class="chip">EU permanent</span><span class="chip">B2B</span></div>
+          <div class="mk-flag" aria-hidden="true">EU</div>
+        </div>
+        <div class="mk-panel" role="tabpanel" id="mk-gcc" aria-labelledby="t-gcc" hidden>
+          <h3>GCC</h3>
+          <p>Hiring models for Gulf markets, from direct employment to outsourced payroll structures.</p>
+          <div class="chips"><span class="chip">Direct hire</span><span class="chip">Free Zone / company models</span><span class="chip">Employer of Record</span><span class="chip">Outsourced / payroll</span></div>
+          <div class="mk-flag" aria-hidden="true">GCC</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">Career journey</span>
+      <h2 class="reveal" data-d="1">Professional experience</h2>
+      <p class="reveal" data-d="2">From sourcing specialist in 2015 to leading a 15+ person delivery team today.</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-line" aria-hidden="true"><i></i></div>
+
+      <article class="job reveal">
+        <div class="job-card">
+          <div class="job-top"><h3>Technical Lead Recruitment Consultant</h3><span class="when">Jan 2025 – Present</span></div>
+          <div class="org">IMS People Possible <small>· India · UK, EU &amp; US markets</small></div>
+          <ul>
+            <li>Built and scaled the recruitment team from 1 to 15+ members, creating a structured delivery function covering recruitment, performance management, coaching and commercial output.</li>
+            <li>Developed recruiters from new joiners into live-billing consultants through role allocation, sourcing standards, screening frameworks, KPI ownership and placement-focused coaching.</li>
+            <li>Consistently achieved 110%+ quarterly billing performance and contributed to £1.2M+ annual team revenue through UK and European placements.</li>
+          </ul>
+          <ul class="job-more">
+            <li>Lead, coach and performance-manage 15+ technical recruiters; set individual KPIs, SLAs and weekly delivery targets aligned to business objectives.</li>
+            <li>Own end-to-end 360° delivery across contract and permanent mandates, from requisition intake and job briefing through sourcing, screening, offer negotiation and onboarding.</li>
+            <li>Partner with C-suite, Heads of Engineering and Talent Acquisition stakeholders at global financial institutions, Big 4 firms and product organisations.</li>
+            <li>Specialist delivery across Data, Cloud, Cybersecurity, Software Engineering, DevOps/SRE, Business Analysis and IT Programme/Project Management.</li>
+            <li>Reduced average team time-to-fill by 22% through structured intake briefings, pipeline management, coaching and performance reviews.</li>
+          </ul>
+          <button class="toggle" aria-expanded="false">Show 5 more</button>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-card">
+          <div class="job-top"><h3>Senior Recruitment Consultant <span class="tag">Promoted in 6 months</span></h3><span class="when">Jul 2024 – Dec 2024</span></div>
+          <div class="org">IMS People Possible <small>· India · UK &amp; EU markets</small></div>
+          <ul>
+            <li>Executed end-to-end 360° recruitment across DevOps, Software Engineering, Data and Cloud roles.</li>
+            <li>Built targeted Boolean searches and proactive talent pipelines using LinkedIn Recruiter and ATS platforms.</li>
+            <li>Managed offer processes, salary benchmarking, contractor rate negotiation and onboarding handoffs.</li>
+            <li>Built relationships with hiring managers across financial services and Big 4 accounts, supporting client retention and repeat hiring.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-card">
+          <div class="job-top"><h3>Technical Lead Recruitment Consultant</h3><span class="when">Mar 2022 – Jul 2024</span></div>
+          <div class="org">Solvex Solutions <small>· Ahmedabad · UK &amp; EU markets</small></div>
+          <ul>
+            <li>Led a team of 5 recruiters — allocating requisitions, monitoring delivery metrics and driving weekly and monthly performance.</li>
+            <li>Improved shortlist-to-interview conversion by 30% through candidate review sessions and structured coaching.</li>
+            <li>Generated €243,000+ annual revenue margin and was invited to work onsite at the London office to strengthen client relationships.</li>
+          </ul>
+          <ul class="job-more">
+            <li>Maintained a strong personal billing contribution while leading the team; closed 15+ deals per quarter across niche technology and leadership requirements.</li>
+            <li>Delivered for UK financial institutions, global banks and Big 4 practices across technology transformation, cloud, cybersecurity, data and RegTech.</li>
+            <li>Managed UK Outside and Inside IR35 contract recruitment alongside EU contract and permanent hiring.</li>
+          </ul>
+          <button class="toggle" aria-expanded="false">Show 3 more</button>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="job-card">
+          <div class="job-top"><h3>Senior Technical Recruitment Consultant</h3><span class="when">Jul 2020 – Mar 2022</span></div>
+          <div class="org">Solvex Solutions <small>· Ahmedabad · UK, EU &amp; US markets</small></div>
+          <ul>
+            <li>Delivered the full recruitment lifecycle for technology clients across UK, EU and US markets.</li>
+            <li>Specialised in DevOps/Cloud, Software Development, Data, QA/Testing and technical architecture roles.</li>
+            <li>Translated technical requirements from hiring stakeholders into actionable sourcing strategies.</li>
+            <li>Managed multi-currency rate negotiations across GBP, EUR and USD.</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="early">
+        <article class="job reveal">
+          <div class="job-card">
+            <span class="when">Oct 2018 – Jun 2020</span>
+            <h3>Senior Technical Recruiter</h3>
+            <div class="org">eTeam Inc. <small>· US market</small></div>
+            <p>360° US IT recruitment across Java, .NET, Hadoop, Big Data and SAP; vendor and bench sales; W2, C2C and 1099.</p>
+          </div>
+        </article>
+        <article class="job reveal" data-d="1">
+          <div class="job-card">
+            <span class="when">Mar 2017 – Oct 2018</span>
+            <h3>Senior Recruitment Consultant</h3>
+            <div class="org">IMS People <small>· US market</small></div>
+            <p>Financial services recruitment for JPMorgan Chase, BNY Mellon and Bank of America, then technology hiring for Cisco.</p>
+          </div>
+        </article>
+        <article class="job reveal" data-d="2">
+          <div class="job-card">
+            <span class="when">Mar 2015 – Mar 2017</span>
+            <h3>Recruitment Specialist</h3>
+            <div class="org">AvistaTech <small>· US market</small></div>
+            <p>Progressed from sourcing specialist to full-cycle recruiter across enterprise and high-volume hiring.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION + TOOLS ================= -->
+<section class="block" id="education" style="padding-top:40px">
+  <div class="wrap two">
+    <div class="reveal">
+      <span class="kicker">Education</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem)">Academic background</h2>
+      <div class="edu">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+        <div><h3>Bachelor of Science (B.Sc.)</h3><p>Jaipur National University · 2020 – 2022</p></div>
+      </div>
+      <div class="edu">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+        <div><h3>Bachelor of Science (B.Sc.)</h3><p>KK Shah Science College · 2012 – 2013</p></div>
+      </div>
+    </div>
+    <div class="reveal" data-d="1">
+      <span class="kicker">Tools &amp; ATS</span>
+      <h2 style="font-size:clamp(1.7rem,3vw,2.3rem)">Platforms used daily</h2>
+      <div class="tools" style="margin-top:22px">
+        <span class="tool">LinkedIn Recruiter</span><span class="tool">Bullhorn</span><span class="tool">Greenhouse</span><span class="tool">Workday</span><span class="tool">JobDiva</span><span class="tool">Dice</span><span class="tool">Indeed</span><span class="tool">CareerBuilder</span><span class="tool">Monster</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker reveal">Get in touch</span>
+      <h2 class="reveal" data-d="1">Let's talk about building your hiring team</h2>
+      <p class="reveal" data-d="2">Open to conversations with hiring leaders, agency owners and talent teams about recruitment leadership, delivery and growth.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-list">
+        <a class="c-item reveal" href="mailto:arunpratap.rv007@gmail.com">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
+          <div><h3>Email</h3><p>arunpratap.rv007@gmail.com</p></div>
+        </a>
+        <a class="c-item reveal" data-d="1" href="tel:+919904464779">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></div>
+          <div><h3>Phone</h3><p>+91 99044 64779</p></div>
+        </a>
+        <a class="c-item reveal" data-d="2" href="https://www.linkedin.com/in/arunpratap-singh-a26348167" target="_blank" rel="noopener">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></div>
+          <div><h3>LinkedIn</h3><p>linkedin.com/in/arunpratap-singh-a26348167</p></div>
+        </a>
+        <div class="c-item reveal" data-d="3">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+          <div><h3>Location</h3><p>Ahmedabad, Gujarat, India</p></div>
+        </div>
+      </div>
+
+      <form class="cf reveal" data-d="1" id="contactForm" novalidate>
+        <div class="row2">
+          <div class="field"><input id="f-name" name="name" type="text" placeholder=" " required maxlength="100" autocomplete="name" /><label for="f-name">Your name</label></div>
+          <div class="field"><input id="f-email" name="email" type="email" placeholder=" " required maxlength="150" autocomplete="email" /><label for="f-email">Email address</label></div>
+        </div>
+        <div class="row2">
+          <div class="field"><input id="f-company" name="company" type="text" placeholder=" " maxlength="120" autocomplete="organization" /><label for="f-company">Company (optional)</label></div>
+          <div class="field">
+            <select id="f-topic" name="topic">
+              <option>Leadership opportunity</option>
+              <option>Recruitment partnership</option>
+              <option>Hiring support</option>
+              <option>Something else</option>
+            </select>
+            <label for="f-topic">Topic</label>
+            <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+          </div>
+        </div>
+        <div class="field"><textarea id="f-msg" name="message" placeholder=" " required maxlength="3000"></textarea><label for="f-msg">Message</label></div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" name="website" type="text" tabindex="-1" autocomplete="off" /></div>
+        <div class="form-foot">
+          <p class="status" id="formStatus" role="status" aria-live="polite"></p>
+          <button class="btn btn-primary magnetic" type="submit" id="sendBtn"><span class="spinner"></span><span class="lbl">Send message</span></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot-in">
+    <span>© <span id="yr"></span> Arunpratap Singh · Recruitment Leader</span>
+    <a href="#top" class="to-top" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 15 6-6 6 6"/></svg></a>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = (s, c = document) => c.querySelector(s);
+  const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+  $('#yr').textContent = new Date().getFullYear();
+
+  /* ---- headline word split ---- */
+  const h1 = $('#headline');
+  const wrapWords = (node) => {
+    [...node.childNodes].forEach(n => {
+      if (n.nodeType === 3) {
+        const frag = document.createDocumentFragment();
+        n.textContent.split(/(\s+)/).forEach(part => {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          const w = document.createElement('span'); w.className = 'w';
+          const i = document.createElement('span'); i.textContent = part;
+          w.appendChild(i); frag.appendChild(w);
+        });
+        n.replaceWith(frag);
+      } else if (n.nodeType === 1 && !n.classList.contains('w')) {
+        // wrap gradient span as a single block to keep gradient continuous per word
+        const words = n.textContent.split(' ');
+        n.textContent = '';
+        words.forEach((t, idx) => {
+          const w = document.createElement('span'); w.className = 'w';
+          const i = document.createElement('span'); i.textContent = t; i.className = 'grad';
+          w.appendChild(i); n.parentNode.insertBefore(w, n);
+          if (idx < words.length - 1) n.parentNode.insertBefore(document.createTextNode(' '), n);
+        });
+        n.remove();
+      }
+    });
+  };
+  wrapWords(h1);
+  $$('.w > span', h1).forEach((s, i) => s.style.transitionDelay = (0.15 + i * 0.07) + 's');
+  requestAnimationFrame(() => setTimeout(() => document.body.classList.add('loaded'), 60));
+
+  /* ---- typing line ---- */
+  const phrases = [
+    '360° IT recruitment across UK, EU, US & GCC',
+    'contract & permanent: IR35, B2B, W2, C2C',
+    'turning new joiners into live billers',
+    'Data, Cloud, Cyber & DevOps hiring',
+    'financial services & Big 4 delivery'
+  ];
+  const typed = $('#typed');
+  if (reduce) { typed.textContent = phrases[0]; }
+  else {
+    let p = 0, c = 0, del = false;
+    const tick = () => {
+      const txt = phrases[p];
+      typed.textContent = txt.slice(0, c);
+      if (!del && c < txt.length) { c++; setTimeout(tick, 42 + Math.random() * 40); }
+      else if (!del) { del = true; setTimeout(tick, 1900); }
+      else if (c > 0) { c--; setTimeout(tick, 22); }
+      else { del = false; p = (p + 1) % phrases.length; setTimeout(tick, 350); }
+    };
+    setTimeout(tick, 1100);
+  }
+
+  /* ---- count up ---- */
+  const countUp = (el) => {
+    if (el.dataset.done) return; el.dataset.done = 1;
+    const end = parseFloat(el.dataset.count), dec = +(el.dataset.decimals || 0);
+    const pre = el.dataset.prefix || '', suf = el.dataset.suffix || '';
+    if (reduce) { el.textContent = pre + end.toFixed(dec) + suf; return; }
+    const dur = 1800, t0 = performance.now();
+    const step = (t) => {
+      const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 4);
+      el.textContent = pre + (end * e).toFixed(dec) + suf;
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+
+  /* ---- reveal observer ---- */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const t = en.target;
+      t.classList.add('in');
+      $$('[data-count]', t).forEach(countUp);
+      if (t.matches('[data-count]')) countUp(t);
+      $$('.bar i', t).forEach(b => b.style.width = b.dataset.w + '%');
+      $$('.growth i', t).forEach((g, i) => setTimeout(() => g.style.height = g.dataset.h + '%', i * 90));
+      io.unobserve(t);
+    });
+  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  /* ---- nav: scrolled state, progress, active link ---- */
+  const nav = $('header.nav'), bar = $('.progress');
+  const links = $$('.nav-links a');
+  const sections = links.map(a => $(a.getAttribute('href')));
+  const tl = $('.timeline'), tlFill = $('.tl-line i'), jobs = $$('.timeline .job');
+  const onScroll = () => {
+    const y = window.scrollY, h = document.documentElement.scrollHeight - innerHeight;
+    nav.classList.toggle('scrolled', y > 20);
+    bar.style.transform = `scaleX(${h > 0 ? y / h : 0})`;
+    let cur = -1;
+    sections.forEach((s, i) => { if (s && s.getBoundingClientRect().top < innerHeight * 0.4) cur = i; });
+    links.forEach((a, i) => a.classList.toggle('active', i === cur));
+    // timeline fill
+    const r = tl.getBoundingClientRect();
+    const prog = Math.max(0, Math.min(1, (innerHeight * 0.6 - r.top) / r.height));
+    tlFill.style.height = (prog * 100) + '%';
+    jobs.forEach(j => j.classList.toggle('lit', j.getBoundingClientRect().top < innerHeight * 0.6));
+  };
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* ---- mobile menu ---- */
+  const mb = $('.menu-btn'), nl = $('#navlinks');
+  mb.addEventListener('click', () => {
+    const open = mb.getAttribute('aria-expanded') !== 'true';
+    mb.setAttribute('aria-expanded', open); nl.classList.toggle('open', open);
+    mb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  });
+  links.forEach(a => a.addEventListener('click', () => { mb.setAttribute('aria-expanded', 'false'); nl.classList.remove('open'); }));
+
+  /* ---- experience toggles ---- */
+  $$('.toggle').forEach(btn => {
+    const label = btn.textContent;
+    btn.addEventListener('click', () => {
+      const job = btn.closest('.job'); const open = job.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open); btn.textContent = open ? 'Show less' : label;
+      onScroll();
+    });
+  });
+
+  /* ---- markets tabs ---- */
+  const tabs = $$('.mk-tab');
+  const select = (tab) => {
+    tabs.forEach(t => { const on = t === tab; t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; $('#' + t.getAttribute('aria-controls')).hidden = !on; });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => select(t));
+    t.addEventListener('keydown', (e) => {
+      const dir = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
+      if (!dir) return; e.preventDefault();
+      const n = tabs[(i + dir + tabs.length) % tabs.length]; n.focus(); select(n);
+    });
+  });
+
+  if (!reduce && matchMedia('(pointer:fine)').matches) {
+    /* ---- cursor spotlight ---- */
+    const root = document.documentElement;
+    addEventListener('pointermove', (e) => { root.style.setProperty('--mx', e.clientX + 'px'); root.style.setProperty('--my', e.clientY + 'px'); }, { passive: true });
+
+    /* ---- card glow follow ---- */
+    $$('.glow').forEach(c => c.addEventListener('pointermove', (e) => {
+      const r = c.getBoundingClientRect();
+      c.style.setProperty('--x', (e.clientX - r.left) + 'px'); c.style.setProperty('--y', (e.clientY - r.top) + 'px');
+    }));
+
+    /* ---- tilt ---- */
+    $$('.tilt').forEach(c => {
+      c.addEventListener('pointermove', (e) => {
+        const r = c.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+        c.style.transform = `perspective(900px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg)`;
+      });
+      c.addEventListener('pointerleave', () => c.style.transform = '');
+    });
+
+    /* ---- magnetic buttons ---- */
+    $$('.magnetic').forEach(b => {
+      b.addEventListener('pointermove', (e) => {
+        const r = b.getBoundingClientRect();
+        b.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * .18}px, ${(e.clientY - r.top - r.height / 2) * .3}px)`;
+      });
+      b.addEventListener('pointerleave', () => b.style.transform = '');
+    });
+  }
+
+  /* ---- hero talent network canvas ---- */
+  const cv = $('#net'), ctx = cv.getContext('2d');
+  let W, H, dpr, pts = [], mouse = { x: -999, y: -999 }, running = true;
+  const resize = () => {
+    dpr = Math.min(devicePixelRatio || 1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const n = Math.min(95, Math.floor(W * H / 15000));
+    pts = Array.from({ length: n }, () => ({
+      x: Math.random() * W, y: Math.random() * H,
+      vx: (Math.random() - .5) * .35, vy: (Math.random() - .5) * .35,
+      r: Math.random() * 1.6 + .8, hub: Math.random() < .12
+    }));
+  };
+  const draw = () => {
+    if (!running) return;
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i];
+      if (!reduce) { p.x += p.vx; p.y += p.vy; }
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      const mdx = p.x - mouse.x, mdy = p.y - mouse.y, md = Math.hypot(mdx, mdy);
+      if (md < 160) {
+        ctx.strokeStyle = `rgba(45,212,191,${(1 - md / 160) * .55})`; ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(mouse.x, mouse.y); ctx.stroke();
+      }
+      for (let j = i + 1; j < pts.length; j++) {
+        const q = pts[j], d = Math.hypot(p.x - q.x, p.y - q.y);
+        if (d < 130) {
+          ctx.strokeStyle = `rgba(124,140,255,${(1 - d / 130) * .28})`; ctx.lineWidth = .8;
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(q.x, q.y); ctx.stroke();
+        }
+      }
+      ctx.beginPath(); ctx.arc(p.x, p.y, p.hub ? p.r + 1.6 : p.r, 0, Math.PI * 2);
+      ctx.fillStyle = p.hub ? 'rgba(45,212,191,.95)' : 'rgba(180,190,255,.7)'; ctx.fill();
+      if (p.hub) { ctx.beginPath(); ctx.arc(p.x, p.y, p.r + 6, 0, Math.PI * 2); ctx.fillStyle = 'rgba(45,212,191,.12)'; ctx.fill(); }
+    }
+    if (!reduce) requestAnimationFrame(draw);
+  };
+  resize(); draw();
+  addEventListener('resize', () => { resize(); if (reduce) draw(); });
+  const hero = $('.hero');
+  hero.addEventListener('pointermove', (e) => { const r = cv.getBoundingClientRect(); mouse.x = e.clientX - r.left; mouse.y = e.clientY - r.top; });
+  hero.addEventListener('pointerleave', () => { mouse.x = mouse.y = -999; });
+  new IntersectionObserver(([en]) => { const was = running; running = en.isIntersecting; if (running && !was && !reduce) requestAnimationFrame(draw); }).observe(hero);
+
+  /* ---- contact form -> /api/contact ---- */
+  const form = $('#contactForm'), status = $('#formStatus'), btn = $('#sendBtn');
+  const setStatus = (msg, kind) => { status.textContent = msg; status.className = 'status ' + (kind || ''); };
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form));
+    if (!data.name.trim() || !data.message.trim()) return setStatus('Add your name and a message to send.', 'err');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) return setStatus('Enter a valid email address so I can reply.', 'err');
+    btn.disabled = true; btn.classList.add('sending'); $('.lbl', btn).textContent = 'Sending…'; setStatus('');
+    try {
+      const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+      const out = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(out.error || 'The message could not be sent.');
+      form.reset(); setStatus('Message sent. I\'ll reply within 1–2 working days.', 'ok');
+      $('.lbl', btn).textContent = 'Sent';
+      setTimeout(() => { $('.lbl', btn).textContent = 'Send message'; }, 3000);
+    } catch (err) {
+      const body = encodeURIComponent(`${data.message}\n\n— ${data.name}${data.company ? ', ' + data.company : ''}`);
+      status.innerHTML = '';
+      status.className = 'status err';
+      status.append(`${err.message} `);
+      const a = document.createElement('a');
+      a.href = `mailto:arunpratap.rv007@gmail.com?subject=${encodeURIComponent(data.topic || 'Website enquiry')}&body=${body}`;
+      a.textContent = 'Send by email instead'; a.style.textDecoration = 'underline';
+      status.append(a);
+      $('.lbl', btn).textContent = 'Send message';
+    } finally {
+      btn.disabled = false; btn.classList.remove('sending');
+    }
+  });
+})();
+</script>
+</body>
+</html>
